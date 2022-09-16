@@ -4,6 +4,7 @@ link = "http://selenium1py.pythonanywhere.com/"
 
 class MainPage:
 
+
     def test_guest_can_go_to_login_page(self, browser):
         browser.get(link)
         self.go_to_login_page(browser)
