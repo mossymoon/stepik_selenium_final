@@ -24,7 +24,11 @@ class MainPage(BasePage):
         product_basket = self.browser.find_element(*ProductPageLocators.ADD_TO_BASKET)
         product_basket.click()
 
+    def should_not_be_success_message(self):
+        not_success_alert = self.browser.is_not_element_present(*ProductPageLocators.PRODUCT_CHECK2)
+        return not_success_alert()
 
-
+    def __init__(self, *args, **kwargs):
+        super(MainPage, self).__init__(*args, **kwargs)
 
 
