@@ -22,3 +22,7 @@ class ProductPage(BasePage):
     def should_see_as_disappearing_message(self):
         assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
             "Success message is presented, but it should disappear"
+
+    def click_basket_button(self):
+        basket_button = self.browser.find_element(*ProductPageLocators.BASKET_BUTTON)
+        basket_button.click()

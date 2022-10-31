@@ -1,7 +1,7 @@
 import time
 
 from .base_page import BasePage
-from .locators import MainPageLocators
+from .locators import MainPageLocators, BasketPageLocators
 from .login_page import LoginPage
 from .locators import ProductPageLocators
 
@@ -27,6 +27,10 @@ class MainPage(BasePage):
     def should_not_be_success_message(self):
         not_success_alert = self.browser.is_not_element_present(*ProductPageLocators.PRODUCT_CHECK2)
         return not_success_alert()
+
+    def click_basket_button(self):
+        basket_button = self.browser.find_element(*BasketPageLocators.BASKET_MAIN_PAGE)
+        basket_button.click()
 
     def __init__(self, *args, **kwargs):
         super(MainPage, self).__init__(*args, **kwargs)

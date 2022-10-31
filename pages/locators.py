@@ -20,7 +20,13 @@ class ProductPageLocators():
     PRICE_CHECK2 = (By.XPATH, '//*[@id="messages"]/div[3]/div/p[1]/strong')
     PRICE_CHECK3 = (By.CSS_SELECTOR, "#messages strong")
     SUCCESS_MESSAGE = (By.XPATH, '//*[@id="messages"]/div[1]/div')
+    BASKET_BUTTON = (By.XPATH, './/a[contains(@href,"/en-gb/basket")][contains(text(),"View basket")]')
 
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+
+class BasketPageLocators():
+    BASKET_MAIN_PAGE = (By.XPATH, './/a[contains(@href,"/ru/basket")][contains(text(),"Посмотреть корзину")]')
+    BASKET_HAS_NO_GOODS = (By.XPATH, '//*[@id="content_inner"]/p')
+    BASKET_NOT_EMPTY = (By.XPATH, '//*[@id="messages"]/div[1]/div/text()')
