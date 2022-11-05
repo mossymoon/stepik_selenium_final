@@ -10,9 +10,10 @@ class LoginPageLocators():
     REGISTER_FORM_USER_EMAIL = (By.XPATH, '//*[@id="id_registration-email"]')
     REGISTER_FORM_USER_PASS = (By.XPATH, '//*[@id="id_registration-password1"]')
     REGISTER_FORM_USER_REPASS = (By.XPATH, '//*[@id="id_registration-password2"]')
+    BUTTON_REGISTER = (By.XPATH, '//button[@name="registration_submit"]')
 
 class ProductPageLocators():
-    ADD_TO_BASKET = (By.XPATH, '//*[@id="add_to_basket_form"]/button')
+    ADD_TO_BASKET = (By.XPATH, '//*[@class="btn btn-lg btn-primary btn-add-to-basket"]')
     PRODUCT_CHECK = (By.XPATH, '//*[@id="messages"]/div[1]/div/strong')
     PRODUCT_CHECK2 = (By.XPATH, '//*[@id="messages"]/div[1]/div')
     PRODUCT_CHECK3 = (By.XPATH, '//*[@id="content_inner"]/article/div[1]/div[2]/h1')
@@ -25,8 +26,9 @@ class ProductPageLocators():
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
 
 class BasketPageLocators():
-    BASKET_MAIN_PAGE = (By.XPATH, './/a[contains(@href,"/ru/basket")][contains(text(),"Посмотреть корзину")]')
+    BASKET_MAIN_PAGE = (By.XPATH, './/a[@class="btn btn-default"]')
     BASKET_HAS_NO_GOODS = (By.XPATH, '//*[@id="content_inner"]/p')
     BASKET_NOT_EMPTY = (By.XPATH, '//*[@id="messages"]/div[1]/div/text()')
